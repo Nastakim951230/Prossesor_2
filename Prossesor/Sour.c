@@ -13,7 +13,7 @@ int main()
 	FILE* file = fopen("data.txt", "w");
 	writeData(file);
 	int n = readData(file);
-	char* str = calloc(1000, sizeof(char));
+	char* str = calloc(100, sizeof(char));
 	str = stroka(n);
 	LPSTR str1 = str;
 	STARTUPINFO si = { 0 };
@@ -42,9 +42,10 @@ int main()
 	return 0;
 }
 
+//Метод для записи в файл
 int writeData(FILE* file)
 {
-	fprintf(file, "0 -2 -3");
+	fprintf(file, "8 -2 -3.5");
 	//fprintf(file, "1 12 36");
 	fclose(file);
 }
